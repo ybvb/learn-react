@@ -4,8 +4,8 @@ import Footer from "./Footer";
 import Header from "./Header";
 
 export default class Layout extends React.Component {
-  constructor(props){
-    super(props);
+  constructor() {
+    super();
     this.state = {
       title: "Welcome",
     };
@@ -17,11 +17,10 @@ export default class Layout extends React.Component {
 
   render() {
     return (
-      <layout>
-        <Header changeTitle={this.changeTitle.bind(this)}
-                      title={this.state.title} />
+      <div>
+        <Header changeTitle={this.changeTitle.bind(this)} title={this.state.title} />
         <Footer />
-      </layout>
+      </div>
     );
   }
 }
